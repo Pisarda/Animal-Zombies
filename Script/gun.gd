@@ -25,5 +25,3 @@ func _process(delta: float) -> void:
 	
 func equip():
 	set_process(true)	 
-
-##gay
