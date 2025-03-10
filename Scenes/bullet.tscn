@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpy41u3876lv0"]
+
+[ext_resource type="Script" uid="uid://dr3r16jqa2ff3" path="res://Script/bullet.gd" id="1_oduel"]
+[ext_resource type="Texture2D" uid="uid://dqvfa0fb1110q" path="res://Texture/Weapons/Bullets/bullet.png" id="2_ycag2"]
+
+[node name="bullet" type="Node2D"]
+script = ExtResource("1_oduel")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, 0)
+scale = Vector2(0.0601563, 0.0634766)
+texture = ExtResource("2_ycag2")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(1.45, 1.4)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
